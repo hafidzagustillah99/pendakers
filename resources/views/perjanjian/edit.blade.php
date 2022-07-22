@@ -13,7 +13,7 @@
                
 
         <div class="form-group col-sm-6">
-        <label for="bidang_kerjasama">Bidang Kerjasama</label>
+        <label for="bidang_kerjasama">Tentang</label>
          <input type="text" name="bidang_kerjasama" value="{{ $perjanjian->bidang_kerjasama }}" class="form-control" id="bidang_kerjasama" required>
         </div>
 
@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group col-sm-6">
-        <label for="mou">MOU</label>
+        <label for="mou">No. MOU</label>
          <input type="text" name="mou" value="{{ $perjanjian->mou }}" class="form-control" id="mou" required>
         </div>
 
@@ -49,17 +49,17 @@
         </div>
         
         <div class="form-group col-sm-6">
-        <label for="pihak">Pihak</label>
+        <label for="pihak">Unit Kerja</label>
          <input type="text" name="pihak" value="{{ $perjanjian->pihak }}" class="form-control" id="pihak" required>
         </div>
 
         <div class="form-group col-sm-6">
-        <label for="instansi">Instansi</label>
+        <label for="instansi">Mitra Kerja</label>
          <input type="text" name="instansi" value="{{ $perjanjian->instansi }}" class="form-control" id="instansi" required>
         </div>
 
         <div class="form-group col-sm-6">
-        <label for="keterangan">Keterangan</label>
+        <label for="keterangan">Tahapan</label>
          <input type="text" name="keterangan" value="{{ $perjanjian->keterangan }}" class="form-control" id="keterangan" required>
         </div>
 

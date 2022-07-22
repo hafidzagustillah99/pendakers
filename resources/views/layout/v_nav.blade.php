@@ -1,7 +1,22 @@
 <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
         <li><a href="/dashboard"><i class="fa fa-book"></i> <span>Dashboard</span></a></li>
-        <li><a href="/tentang"><i class="fa fa-user"></i> <span>Tentang</span></a></li>
+
+        <li class="treeview">
+          <a href="tentang">
+            <i class="fa fa-bank"></i>
+            <span>Tentang</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('daftar_daerah.index')}}"><i class="fa fa-circle-o"></i> Daftar Daerah</a></li>
+            <li><a href="{{route('tentang.index')}}"><i class="fa fa-circle-o"></i> History</a></li>
+
+          </ul>
+        </li>
+
         <li><a href="/user"><i class="fa fa-user"></i> <span>User</span></a></li>
         <li class="treeview">
           <a href="Master Data">
@@ -19,7 +34,7 @@
         </li>
        
         <li class="treeview">
-          <a href="Pengajuan Daerah">
+          <a href="samarinda">
             <i class="fa fa-pencil"></i>
             <span>Pengajuan Daerah</span>
             <span class="pull-right-container">

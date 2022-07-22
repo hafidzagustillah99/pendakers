@@ -23,14 +23,14 @@
             <tr>
         <th>No</th>
         <th>Nama Daerah</th>
-        <th>Bidang Kerjasama</th>
+        <th>Tentang</th>
         <th>Tanggal</th>
-        <th>MOU</th>
+        <th>No. MOU</th>
         <th>No. PKS</th>
         <th>Jangka Waktu</th>
-        <th>Pihak</th>
-        <th>Instansi</th>
-        <th>Keterangan</th>
+        <th>Unit Kerja</th>
+        <th>Mitra Kerja</th>
+        <th>Tahapan</th>
         <th>Tahun</th>
         <th colspan="2">Action</th>
             </tr>
