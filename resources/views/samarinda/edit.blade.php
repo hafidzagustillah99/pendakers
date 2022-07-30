@@ -2,7 +2,7 @@
 @section('title', 'Update')
 
 @section('content')
-<form action="{{route('samarinda.update', $perjanjian->id)}}" method="post" enctype="multipart/form-data">
+<form action="{{route('samarinda.update', $samarinda->id)}}" method="post" enctype="multipart/form-data">
         @csrf
     <input type="hidden" name="_method" value="PATCH">
     <div class="content">       
@@ -58,10 +58,14 @@
          <input type="text" name="tahapan" value="{{ $samarinda->tahapan }}" class="form-control" id="tahapan" required>
         </div>
 
+        <div class="form-group col-sm-6">
+        <label for="file">FILE</label>
+         <input type="file" name="file" value="{{ $samarinda->file }}" class="form-control" id="file" required>
+        </div>
 
         <div class="form-group col-sm-6">
         <label for="tahun">Tahun</label>
-         <input type="text" name="catatan" value="{{ $samarinda->tahun }}" class="form-control" id="tahun" required>
+         <input type="text" name="tahun" value="{{ $samarinda->tahun }}" class="form-control" id="tahun" required>
         </div>
 
         

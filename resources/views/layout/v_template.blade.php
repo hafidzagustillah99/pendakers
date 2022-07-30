@@ -116,14 +116,7 @@
         </div>
       </div>
       <!-- search form -->
-      <form action="/perjanjian" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="search" name="search" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-            <button type="search" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-          </span>
-        </div>
-      </form>
+      
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       @include('layout.v_nav')

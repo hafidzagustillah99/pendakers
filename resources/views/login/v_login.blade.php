@@ -37,7 +37,9 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-sm-6 d-none d-lg-block bg-login-image">
+                                <img src="{{asset('template/')}}/dist/img/pemprovkaltim.jpg"  width="500" height="700" class="img-circle" alt="User Image">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -71,7 +73,7 @@
                                                     {!! captcha_img('flat') !!}
                                                 </div>
                                                 <br>
-                                                <a href="javascript:void(0)" onclick="refreshCaptcha()">Refresh</a>
+                                               
                                             </div>
                                         </div>
 

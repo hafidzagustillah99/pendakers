@@ -8,7 +8,6 @@
         @csrf
     <div class="content">       
     <div class="section-body">
-        
 
         <div class="form-group col-sm-6">
         <label for="tentang">Tentang</label>
@@ -48,6 +47,14 @@
         <div class="form-group col-sm-6">
         <label for="tahapan">Tahapan</label>
          <input type="text" name="tahapan" class="form-control" id="tahapan" required>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                <div class="form-group col-sm-6">
+            <label for="file">File</label>
+            <input type="file" name="file" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">

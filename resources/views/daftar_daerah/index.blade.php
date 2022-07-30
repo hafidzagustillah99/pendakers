@@ -12,7 +12,7 @@
             <tr>
         <th>No</th>
         <th>Nama Daerah</th>
-        <th colspan="2">Action</th>
+        
             </tr>
             <tbody>
                 <?php $no = 1; ?>
@@ -21,7 +21,7 @@
             <td>{{ $no ++}}</td>
             <td>{{ $daftar_daerah->daftar}}</td>
            
-            <td><a href="{{ route('daftar_daerah.edit', [$daftar_daerah->id]) }}" class='btn btn-success'><i class="fa fa-edit">edit</i></a></td>
+            
 
             
             </tr>

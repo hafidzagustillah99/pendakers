@@ -13,7 +13,7 @@ class Samarinda extends Model
 
     protected $fillable = [
         'tentang', 'mou', 'pks','tanggal', 'jangka_waktu', 'unitkerja', 'mitrakerja',
-        'tahapan', 'tahun'
+        'tahapan', 'file', 'tahun',
     ];
 
     

@@ -31,6 +31,7 @@
         <th>Mitra Kerja</th>
         <th>Tahapan</th>
         <th>Tahun</th>
+        <th>File</th>
         <th colspan="2">Action</th>
             </tr>
             <tbody>
@@ -47,9 +48,13 @@
             <td>{{ $item->mitrakerja }}</td>
             <td>{{ $item->tahapan }}</td>
             <td>{{ $item->tahun }}</td>
+            <td align="center">
+                <p>
+                    <a href="{{ asset('storage/file/'.$item->file) }}" class="btn btn-xs btn-success" download="">Download</a>
+                </p>
+            </td>
 
             <td><a href="{{ route('samarinda.edit', [$item->id]) }}" class='btn btn-success'><i class="fa fa-edit">edit</i></a></td>
-
             <td>
             <form action="{{ url('samarinda/'.$item->id) }}" method="POST">
                 @csrf

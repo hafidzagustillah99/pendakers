@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Samarinda;
-
+use Illuminate\Support\Str;
+ 
 class SamarindaController extends Controller
 {
      /**
@@ -21,7 +22,7 @@ class SamarindaController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->keyword;
-        $samarinda = Samarinda::all();
+        
         
         $samarinda = Samarinda::where('tentang', 'LIKE', '%'.$keyword.'%')
             ->orwhere('tahun', 'LIKE', '%'.$keyword. '%')
@@ -59,6 +60,14 @@ class SamarindaController extends Controller
      */
     public function store(Request $request)
     {
+        $file = $request->file('file');
+        $extension = $file->getClientOriginalExtension();
+
+        $nmfile = Str::uuid().".".$extension;
+        $path = $request->file('file')->storeAs(
+            'public/file',$nmfile, 
+        );
+
         $samarinda = new Samarinda();
         $samarinda->tentang = $request->tentang;
         $samarinda->mou = $request->mou;
@@ -68,6 +77,7 @@ class SamarindaController extends Controller
         $samarinda->unitkerja = $request->unitkerja;
         $samarinda->mitrakerja = $request->mitrakerja;
         $samarinda->tahapan = $request->tahapan;
+        $samarinda->file = $nmfile;
         $samarinda->tahun = $request->tahun;
         $samarinda->save();
         return redirect('/samarinda');
@@ -108,6 +118,8 @@ class SamarindaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
+
         $samarinda = Samarinda::find($id);
         $samarinda->tentang = $request->tentang;
         $samarinda->mou = $request->mou;
@@ -117,6 +129,20 @@ class SamarindaController extends Controller
         $samarinda->unitkerja = $request->unitkerja;
         $samarinda->mitrakerja = $request->mitrakerja;
         $samarinda->tahapan = $request->tahapan;
+  
+        if ($request->file('file') != null) {
+            echo $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension();
+
+            $nmfile = Str::uuid() . "." . $extension;
+            $path = $request->file('file')->storeAs(
+                'public/file',
+                $nmfile,
+                
+            );
+           echo  $samarinda->file = $nmfile;
+        }
+        $samarinda->file = $nmfile;
         $samarinda->tahun = $request->tahun;
         $samarinda->save();
 

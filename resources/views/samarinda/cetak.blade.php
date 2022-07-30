@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-        <img src="{{asset('template/')}}/dist/img/pemprovkaltim.jpg" class="img-circle" alt="User Image" width="70" height="70"> Provinsi Kalimantan Timur.
+        <img src="{{asset('template/')}}/dist/img/samarinda.png" class="img-circle" alt="User Image" width="70" height="70"> Provinsi Kalimantan Timur | Kota Samarinda
           <small class="pull-right">Date: {{ date('d M Y')}}</small>
         </h2>
       </div>
@@ -60,6 +60,7 @@
             <th>Mitra Kerja</th>
             <th>Tahapan</th>
             <th>Tahun</th>
+            <th>File</th>
           </tr>
           </thead>
           <tbody>
@@ -76,6 +77,7 @@
             <td>{{ $data->mitrakerja}}</td>
             <td>{{ $data->tahapan }}</td>
             <td>{{ $data->tahun }}</td>
+            <td>{{ $data->file }}</td>
             
           </tr>
           @endforeach
